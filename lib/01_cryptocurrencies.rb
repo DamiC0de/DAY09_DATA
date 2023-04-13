@@ -74,16 +74,10 @@ loop do
     when 3
         effacer_console
         # 3. crypto-monnaies avec un cours inférieur à 6000
-        cryptos_below_6000 = my_hash.select { |crypto, price| price < 6000 }
-
-        # on trie les cryptos de manière décroissante
-        sorted_cryptos = cryptos_below_6000.sort_by { |crypto, price| -price }
         puts yellow_bold ("Crypto-monnaies avec un cours inférieur à 6000 :")
-        sorted_cryptos.each do |crypto, price|
-            # Conversion du nombre inbuvable en décimale (8 décimales)
-            puts "#{crypto}: #{price}"
-        end
-      
+        puts ""
+        puts my_hash.select{|crypto, prices| prices<6000}
+
     when 4
         effacer_console
         # 4. Affiche moi la devise la plus cher parmis les cryptos < à 6000
