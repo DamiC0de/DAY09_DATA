@@ -1,3 +1,7 @@
+def bold(text)
+    "\033[1m#{text}\033[0m"
+  end
+
 def red_bold(texte)
     "\e[1;31m#{texte}\e[0m"
 end
