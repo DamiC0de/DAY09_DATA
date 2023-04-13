@@ -39,7 +39,7 @@ Hint : Il est entièrement possible de le faire "à la main" via une boucle, mai
 
 #### Une fois cette association réalisée, code un programme Ruby pour donner :
 
-La ou les crypto qui ont la plus grosse valeur.
-La ou les crypto qui ont la plus petite valeur.
-Les devises dont le cours est inférieur à 6000
-La devise la plus chère parmi celles dont le cours est inférieur à 6000.
+1. La ou les crypto qui ont la plus grosse valeur.
+2. La ou les crypto qui ont la plus petite valeur.
+3. Les devises dont le cours est inférieur à 6000
+4. La devise la plus chère parmi celles dont le cours est inférieur à 6000.
