@@ -17,16 +17,28 @@ def effacer_console
 loop do
     puts ""
     puts ""
-    puts "BIG DATA:"
-    puts "1. Combien y a-t-il de handle dans cette array ?"
-    puts "2. Quel est le handle le plus court de cette liste ?"
-    puts "3. Combien y-a-t'il de handle contenant 5 caractères (le @ ne compte pas pour un caractère)"
-    puts "4. Combien commencent par une majuscule (première lettre juste après le @) ?"
-    puts "5. Trie la liste de handle par ordre alphabétique."
-    puts "6. Trie la liste de handle par taille des handle (les plus petits en premiers, les plus grands après)"
-    puts "7. Quelle est la position dans l'array de la personne @epenser ?"
-    puts "8. Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)"
-    puts "0. Quitter"
+    puts "##########################################################################################################################################"
+    puts green_bold ("--------------------------------------------------------   BIG DATA:   -------------------------------------------------------------------")
+    puts "_____________________________________________________________________________________________________________________________________"
+    puts bold ("1. Combien y a-t-il de handle dans cette array ?")
+    puts "_____________________________________________________________________________________________________________________________________"
+    puts bold ("2. Quel est le handle le plus court de cette liste ?")
+    puts "_____________________________________________________________________________________________________________________________________"
+    puts bold ("3. Combien y-a-t'il de handle contenant 5 caractères (le @ ne compte pas pour un caractère)")
+    puts "_____________________________________________________________________________________________________________________________________"
+    puts bold ("4. Combien commencent par une majuscule (première lettre juste après le @) ?")
+    puts "_____________________________________________________________________________________________________________________________________"
+    puts bold ("5. Trie la liste de handle par ordre alphabétique.")
+    puts "_____________________________________________________________________________________________________________________________________"
+    puts bold ("6. Trie la liste de handle par taille des handle (les plus petits en premiers, les plus grands après)")
+    puts "_____________________________________________________________________________________________________________________________________"
+    puts bold ("7. Quelle est la position dans l'array de la personne @epenser ?")
+    puts "_____________________________________________________________________________________________________________________________________"
+    puts bold ("8. Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 
+    caractères, nombre de handle avec 3 caractères, etc)")
+    puts "_____________________________________________________________________________________________________________________________________"
+    puts bold ("0. Quitter")
+    puts "##########################################################################################################################################"
     puts ""
   
     print "Entrez votre choix (1-8) ou 0 pour quitter: "
@@ -91,6 +103,7 @@ loop do
       # 8. Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)
         # ici on utilise group_by => regroupe les éléments en fonction de leurs tailles sans compter le @ (length - 1)
         # on utilise ensuite transform_values => remplace les valeurs par leur nombre d'élements respectifs en utilisant count
+        # &:count cette méthode transforme les valeurs du hash précédemment créé en comptant le nombre de noms d'utilisateur pour chaque longueur. Le résultat est un hash avec les longueurs des noms d'utilisateur en tant que clés et le nombre de noms d'utilisateur de cette longueur en tant que valeurs.
         repartition_by_size = twitter.group_by { |handle| handle.length - 1 }.transform_values(&:count)
 
         # ici on utilise sort_by en premier afin de trier les handles en fonction de leurs tailles
