@@ -20,33 +20,6 @@ my_hash.transform_values!(&:to_f)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def effacer_console
     if Gem.win_platform?
       system("cls")
@@ -63,15 +36,23 @@ def effacer_console
 loop do
     puts ""
     puts ""
-    puts green_bold ("BLOCKCHAIN:")
+    puts "#######################################################################"
+    puts green_bold ("-------------------------     BLOCKCHAIN:     ------------------------- ")
+    puts "_______________________________________________________________________"
+    puts bold ("1. Affiche moi la crypto qui a la plus grosse valeur")
+    puts "_______________________________________________________________________"
+    puts bold ("2. Affiche moi la crypto qui a la plus petite valeur")
+    puts "_______________________________________________________________________"
+    puts bold ("3. Crypto-monnaies avec un cours inférieur à 6000")
+    puts "_______________________________________________________________________"
+    puts bold ("4. Affiche moi la devise la plus cher parmis les cryptos < à 6000")
+    puts "_______________________________________________________________________"
+    puts bold ("0. Quitter")
+    puts "#######################################################################"
     puts ""
-    puts "1. Affiche moi la crypto qui a la plus grosse valeur"
-    puts "2. Affiche moi la crypto qui a la plus petite valeur"
-    puts "3. Crypto-monnaies avec un cours inférieur à 6000"
-    puts "4. Affiche moi la devise la plus cher parmis les cryptos < à 6000"
-    puts "0. Quitter"
-    puts ""
+
     print "Entrez votre choix (1-4) ou 0 pour quitter: "
+   
     choix = gets.chomp.to_i
 
 
