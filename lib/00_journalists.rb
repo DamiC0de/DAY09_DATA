@@ -27,6 +27,7 @@ loop do
     puts "7. Quelle est la position dans l'array de la personne @epenser ?"
     puts "8. Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)"
     puts "0. Quitter"
+    puts ""
   
     print "Entrez votre choix (1-8) ou 0 pour quitter: "
     choix = gets.chomp.to_i
